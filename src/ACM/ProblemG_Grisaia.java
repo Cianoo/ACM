@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author huangsuixin
  * @date 2019/05/08 18:38
  */
-public class Grisaia {
+public class ProblemG_Grisaia {
 
     public static void main(String[] args) {
 

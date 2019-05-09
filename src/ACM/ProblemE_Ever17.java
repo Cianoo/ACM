@@ -5,14 +5,14 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Date;
 
-public class ProblemE {
+public class ProblemE_Ever17 {
 
     public static void main(String[] args) throws ParseException {
         int EXAMPLE_NUMBER = 0;
         String date_format = "MM/dd/yy";
         String date_format1 = "yy/MM/dd";
 
-        ProblemE problemE = new ProblemE();
+        ProblemE_Ever17 problemEEver17 = new ProblemE_Ever17();
         Scanner scanner = new Scanner(System.in);
 
         if (scanner.hasNextInt()) {
@@ -38,9 +38,9 @@ public class ProblemE {
             Scanner scanner1 = new Scanner(System.in);
             String datee = scanner1.next();
 
-            if ((   problemE.checkDateFormat(datee, date_format)
+            if ((   problemEEver17.checkDateFormat(datee, date_format)
                     ||
-                    problemE.checkDateFormat(datee, date_format1))) {
+                    problemEEver17.checkDateFormat(datee, date_format1))) {
                 str[i] = datee;
             } else {
                 System.out.println("日期格式不正确（19/05/09 or 05/09/19）");
@@ -63,7 +63,7 @@ public class ProblemE {
 
 
                 long diff = date1.getTime() - date[i].getTime();        //相差毫秒数
-                long days = problemE.abs(diff) / (1000 * 60 * 60 * 24); //相差天数
+                long days = problemEEver17.abs(diff) / (1000 * 60 * 60 * 24); //相差天数
 
                 System.out.println(days);
             }

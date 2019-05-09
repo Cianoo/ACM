@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author huangsuixin
  * @date 2019/05/07
  */
-public class BeyondTheBoundry {
+public class ProblemB_BeyondTheBoundry {
 
     private static final String[] names = {"Kanbara Akihito", "Kuriyama Mirai", "Nase Hiroomi", "Nase Mitsuki"};
 

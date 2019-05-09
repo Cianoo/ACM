@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author huangsuixin
  * @date 2019/05/08 18:38
  */
-public class Harmony {
+public class ProblemH_Harmony {
     public static void main(String[] args) {
 
         int t;
