@@ -12,7 +12,6 @@ public class ProblemE_Ever17 {
         String date_format = "MM/dd/yy";
         String date_format1 = "yy/MM/dd";
 
-        ProblemE_Ever17 problemEEver17 = new ProblemE_Ever17();
         Scanner scanner = new Scanner(System.in);
 
         if (scanner.hasNextInt()) {
@@ -37,9 +36,8 @@ public class ProblemE_Ever17 {
             Scanner scanner1 = new Scanner(System.in);
             String datee = scanner1.next();
 
-            if ((   problemEEver17.checkDateFormat(datee, date_format)
-                    ||
-                    problemEEver17.checkDateFormat(datee, date_format1))) {
+            if ((   checkDateFormat(datee, date_format)
+                    || checkDateFormat(datee, date_format1))) {
                 str[i] = datee;
             } else {
                 System.out.println("日期格式不正确（19/05/09 or 05/09/19）");
@@ -57,7 +55,7 @@ public class ProblemE_Ever17 {
                 date[i] = simpleDateFormat.parse(str[i]);           //格式化为MM/dd/yy
                 Date date1 = simpleDateFormat1.parse(str[i]);       //格式化为yy/MM//dd
                 long diff = date1.getTime() - date[i].getTime();        //相差毫秒数
-                long days = problemEEver17.abs(diff) / (1000 * 60 * 60 * 24); //相差天数
+                long days = abs(diff) / (1000 * 60 * 60 * 24); //相差天数
 
                 System.out.println(days);
             }
@@ -70,7 +68,7 @@ public class ProblemE_Ever17 {
      * @param a
      * @return
      */
-    private long abs(long a) {
+    private static long abs(long a) {
         return a > 0 ? a : -a;
     }
 
@@ -82,7 +80,7 @@ public class ProblemE_Ever17 {
      * @param format 目标格式
      * @return
      */
-    private boolean checkDateFormat(String date, String format) {
+    private static boolean checkDateFormat(String date, String format) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
 
         simpleDateFormat.setLenient(false);
