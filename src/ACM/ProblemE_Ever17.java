@@ -19,7 +19,6 @@ public class ProblemE_Ever17 {
             int num = Integer.parseInt(scanner.next());
             if (num > 0 && num < 5) {
                 EXAMPLE_NUMBER = num;
-                System.out.println(num);
             } else {
                 System.out.println("请输入[1,5]之间的数字");
             }
@@ -48,8 +47,6 @@ public class ProblemE_Ever17 {
         }
 
         for (int i = 0; i < EXAMPLE_NUMBER; i++) {
-            System.out.println(i);
-
             int b = Integer.parseInt(str[i].split("/")[0]);
 
             if (b > 12) {
@@ -57,11 +54,8 @@ public class ProblemE_Ever17 {
                 date[i] = simpleDateFormat1.parse(str[i]);
                 System.out.println(sdf.format(date[i]));
             } else {
-
                 date[i] = simpleDateFormat.parse(str[i]);           //格式化为MM/dd/yy
                 Date date1 = simpleDateFormat1.parse(str[i]);       //格式化为yy/MM//dd
-
-
                 long diff = date1.getTime() - date[i].getTime();        //相差毫秒数
                 long days = problemEEver17.abs(diff) / (1000 * 60 * 60 * 24); //相差天数
 
